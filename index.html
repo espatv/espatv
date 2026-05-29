@@ -205,7 +205,7 @@
             --shadow: 0 1px 3px rgba(28, 30, 26, .07);
             --shadow-md: 0 6px 18px rgba(28, 30, 26, .10);
             --shadow-lg: 0 12px 32px rgba(28, 30, 26, .18);
-            --espa-grad:     linear-gradient(to right, #d97070 0%, #ffe082 100%);
+            --espa-grad: linear-gradient(to right, #d97070 0%, #ffe082 100%);
         }
 
         [data-theme="dark"] {
@@ -223,7 +223,7 @@
             --shadow: 0 1px 3px rgba(0, 0, 0, .3);
             --shadow-md: 0 6px 18px rgba(0, 0, 0, .35);
             --shadow-lg: 0 12px 32px rgba(0, 0, 0, .55);
-            --espa-grad:     linear-gradient(to right, #ffb3b3 0%, #ffe699 100%);
+            --espa-grad: linear-gradient(to right, #ffb3b3 0%, #ffe699 100%);
         }
 
         [data-palette="teal"] {
@@ -814,6 +814,142 @@
             background: var(--hero-accent);
         }
 
+        .hero-cta-split {
+            display: inline-flex;
+            align-items: stretch;
+            margin-top: 1.8rem;
+            background: rgba(154, 233, 217, 0.10);
+            border: 1.5px solid rgba(154, 233, 217, 0.38);
+            border-radius: 50px;
+            overflow: hidden;
+            transition: border-color 0.2s, transform 0.18s;
+        }
+
+        .hero-cta-split:hover {
+            border-color: rgba(154, 233, 217, 0.65);
+            transform: translateY(-2px);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 18px;
+            color: #9ae9d9;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: rgba(154, 233, 217, 0.08);
+        }
+
+        .hero-info-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 13px;
+            flex-shrink: 0;
+            border: none;
+            border-left: 1px solid rgba(154, 233, 217, 0.3);
+            background: transparent;
+            color: #9ae9d9;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .hero-info-btn:hover,
+        .hero-info-btn:active {
+            background: rgba(154, 233, 217, 0.15);
+        }
+
+        .hero-info-btn svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        .src-dialog {
+            max-width: 360px;
+        }
+
+        .src-url-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin: 16px 20px 0;
+        }
+
+        .src-url-row code {
+            flex: 1;
+            font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+            font-size: 0.82rem;
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .src-steps {
+            margin: 14px 20px 16px;
+            padding-left: 1.4em;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: var(--text-soft);
+            line-height: 1.45;
+        }
+
+        .src-steps li::marker {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .src-full-link {
+            display: block;
+            text-align: center;
+            padding: 12px 20px 18px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-decoration: none;
+            border-top: 1px solid var(--border);
+        }
+
+        .src-full-link:hover {
+            text-decoration: underline;
+        }
+
+        .hero-hint {
+            margin-top: 0;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.45);
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity 0.25s ease, margin-top 0.25s ease;
+        }
+
+        .hero-cta-split:hover ~ .hero-hint {
+            opacity: 1;
+            margin-top: 0.55rem;
+        }
+
+        .hero-hint.show {
+            opacity: 1;
+            margin-top: 0.55rem;
+        }
+
+        @media (hover: none) {
+            .cta-extra {
+                display: none;
+            }
+        }
+
         .wrap {
             max-width: 1140px;
             margin: 0 auto;
@@ -1382,9 +1518,14 @@
         }
 
         @media (max-width: 700px) {
+            .hero {
+                padding-bottom: 2rem;
+            }
+
             .wrap {
                 padding-left: 14px;
                 padding-right: 14px;
+                padding-top: 1.8rem;
             }
 
             .card-top {
@@ -1715,6 +1856,35 @@
         </div>
     </div>
 
+    <div class="modal-overlay" id="srcOverlay">
+        <div class="dialog src-dialog" role="dialog" aria-modal="true" aria-labelledby="src-dialog-title">
+            <div class="modal-head">
+                <div class="modal-info">
+                    <div class="modal-name" id="src-dialog-title">Añadir fuente en Kodi</div>
+                    <div class="modal-sub">loiolo.io · todos los addons</div>
+                </div>
+                <button class="modal-x" id="srcClose" aria-label="Cerrar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="src-url-row">
+                <code>https://loiolo.io/</code>
+                <button class="copy-btn" data-url="https://loiolo.io/" aria-label="Copiar URL"></button>
+            </div>
+            <ol class="src-steps">
+                <li>Ajustes → Explorador de archivos → Añadir fuente</li>
+                <li>Pulsa <strong>&lt;Ninguno&gt;</strong>, escribe la dirección de arriba y acepta</li>
+                <li>Dale un nombre (ej. <em>lo</em>) y acepta</li>
+                <li>Add-ons → Instalar desde zip → selecciona la fuente → elige <em>repository.loiolink-x.x.x.zip</em></li>
+                <li>Add-ons → Instalar desde repositorio → loiolink Repository → ahí se encuentran los add-ons y otros repositorios</li>
+            </ol>
+            <a href="https://loiolo.io/" target="_blank" rel="noopener noreferrer" class="src-full-link">Ver instrucciones completas →</a>
+        </div>
+    </div>
+
     <div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
         <div class="video-dialog" onclick="event.stopPropagation()">
             <button class="video-close" onclick="closeVideo()" aria-label="Cerrar vídeo">
@@ -1733,9 +1903,22 @@
                         <rect x="0" y="0" width="24" height="24" fill="url(#kodi-grad-inline)"
                             mask="url(#k-mask-inline)" />
                     </svg>odi</em></h1>
-            <p class="hero-sub">Addons gratuitos para Kodi en español: TDT, catálogos de televisión española, rankings de películas y series, backup de Kodi, instalación y gestión de addons,<br>streaming a cualquier pantalla, YouTube, Dailymotion, radio, podcasts, control remoto web, gestión de favoritos, noticias, visor de logs, deportes y más.</p>
+            <p class="hero-sub">Addons gratuitos para Kodi en español: TDT, catálogos de televisión española, rankings
+                de películas y series, backup de Kodi, instalación y gestión de addons,<br>streaming a cualquier
+                pantalla, YouTube, Dailymotion, radio, podcasts, control remoto web, gestión de favoritos, noticias,
+                visor de logs, deportes y más.</p>
+            <div class="hero-cta-split">
+                <a href="https://loiolo.io/" class="hero-cta" target="_blank" rel="noopener noreferrer">
+                    Fuente única<span class="cta-extra"> · todos los addons</span>
+                </a>
+                <button class="hero-info-btn" id="heroInfoBtn" aria-label="Más información">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                </button>
+            </div>
+            <p class="hero-hint" id="heroHint">Añádela como fuente en Kodi para instalar todos los addons</p>
         </div>
     </header>
+
 
     <main class="wrap">
         <div class="grid">
@@ -1784,9 +1967,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://espakodi.github.io/espatv/</code>, nómbrala <code>espatv</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1800,7 +1985,8 @@
                     <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path
                                 d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes (engranaje) →
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes
+                            (engranaje) →
                             Sistema → Add-ons.</span></div>
                 </template>
             </div>
@@ -1844,9 +2030,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://espatv.github.io/espadaily/</code>, nómbrala <code>espadaily</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1911,9 +2099,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://espatv.github.io/atresdaily/</code>, nómbrala <code>atresdaily</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1928,7 +2118,8 @@
                     <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path
                                 d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes (engranaje) →
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes
+                            (engranaje) →
                             Sistema → Add-ons.</span></div>
                 </template>
             </div>
@@ -1972,9 +2163,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://espatv.github.io/topzilla/</code>, nómbrala <code>topzilla</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2040,10 +2233,13 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
-                                <code>https://espatv.github.io/estreamninja/</code> (sí, con "e" al principio porque es la versión en español, no es una errata), nómbrala <code>streamninja</code> y
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
+                                <code>https://espatv.github.io/estreamninja/</code> (sí, con "e" al principio porque es
+                                la versión en español, no es una errata), nómbrala <code>streamninja</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
                                 paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
@@ -2153,9 +2349,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://loiolo.io/</code>, nómbrala <code>loiolink</code> y confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
                                 paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
@@ -2215,9 +2413,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://fullstackcurso.github.io/Flow-FavManager/</code>, nómbrala
                                 <code>flowfav</code> y confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2278,9 +2478,11 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong>
+                                (engranaje) →
                                 <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e
+                                introduce la dirección
                                 <code>https://loioloio.github.io/loiolog/</code>, nómbrala <code>loiolog</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2305,12 +2507,25 @@
         (function () {
             var root = document.documentElement;
 
+            var srcOverlay = document.getElementById('srcOverlay');
+            function openSrcModal() { srcOverlay.classList.add('open'); }
+            function closeSrcModal() { srcOverlay.classList.remove('open'); }
+            document.getElementById('heroInfoBtn').addEventListener('click', function (e) {
+                e.stopPropagation();
+                openSrcModal();
+            });
+            document.getElementById('srcClose').addEventListener('click', closeSrcModal);
+            srcOverlay.addEventListener('click', function (e) {
+                if (e.target === srcOverlay) closeSrcModal();
+            });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSrcModal(); });
+
             var burgerBtn = document.getElementById('burgerBtn');
             var topbarActions = document.getElementById('topbarActions');
 
             document.getElementById('mobShareBtn').addEventListener('click', function () {
                 navigator.share
-                    ? navigator.share({ title: document.title, text: SHARE_TEXT, url: SHARE_URL }).catch(function () {})
+                    ? navigator.share({ title: document.title, text: SHARE_TEXT, url: SHARE_URL }).catch(function () { })
                     : navigator.clipboard.writeText(SHARE_URL);
             });
 
