@@ -1,205 +1,2526 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark" data-palette="teal" class="a11y-large">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EspaTV - Repositorios GitHub</title>
+    <title>EspaKodi · Addons para Kodi en castellano</title>
+    <meta name="description"
+        content="Addons gratuitos para Kodi en castellano: TDT, RTVE a la carta, catálogos de televisión española, rankings de películas y series, gestión de favoritos, control remoto web y streaming a cualquier pantalla.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="theme-color" content="#114a43">
+    <link rel="canonical" href="https://espatv.github.io/espatv/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="img/espatv.png">
+
+    <!-- Metadatos para redes sociales (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://espatv.github.io/espatv/">
+    <meta property="og:site_name" content="EspaKodi">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="EspaKodi · Addons para Kodi en castellano">
+    <meta property="og:description"
+        content="8 addons gratuitos para Kodi en castellano: TV en directo, RTVE, AtresPlayer, gestión de favoritos, control remoto web y herramientas de streaming.">
+    <meta property="og:image" content="https://espatv.github.io/espatv/img/espatv.png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:image:alt" content="Logo de EspaKodi">
+
+    <!-- Metadatos específicos para Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EspaKodi · Addons para Kodi en castellano">
+    <meta name="twitter:description"
+        content="8 addons gratuitos para Kodi en castellano: TV en directo, RTVE, AtresPlayer, gestión de favoritos, control remoto web y herramientas de streaming.">
+    <meta name="twitter:image" content="https://espatv.github.io/espatv/img/espatv.png">
+    <meta name="twitter:image:alt" content="Logo de EspaKodi">
+
+    <!-- Datos estructurados para buscadores (SEO) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://espatv.github.io/espatv/#website",
+      "url": "https://espatv.github.io/espatv/",
+      "name": "EspaKodi",
+      "description": "8 addons gratuitos para Kodi en castellano",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://espatv.github.io/espatv/#webpage",
+      "url": "https://espatv.github.io/espatv/",
+      "name": "EspaKodi · Addons para Kodi en castellano",
+      "description": "8 addons gratuitos para Kodi en castellano: TV en directo, RTVE, AtresPlayer, gestión de favoritos, control remoto web y herramientas de streaming.",
+      "isPartOf": { "@id": "https://espatv.github.io/espatv/#website" },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Addons de EspaKodi para Kodi",
+      "description": "8 addons gratuitos para Kodi en castellano",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem", "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "EspaTV",
+            "description": "TDT, RTVE a la carta, búsqueda en YouTube y Dailymotion, catálogo de vídeos, radio, podcasts, reproducción de enlaces, noticias, meteorología y agenda deportiva.",
+            "applicationCategory": "VideoApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/espatv.png",
+            "downloadUrl": "https://espakodi.github.io/espatv/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "EspaDaily",
+            "description": "Explora catálogos de televisión española y busca vídeos públicos en internet. No aloja contenido, solo actúa como buscador.",
+            "applicationCategory": "VideoApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/espadaily.jpg",
+            "downloadUrl": "https://espatv.github.io/espadaily/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "AtresDaily",
+            "description": "Cliente no oficial de A3Player para Kodi. Búsquedas inteligentes y programación en directo de Antena 3, laSexta y más.",
+            "applicationCategory": "VideoApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/atresdaily.jpg",
+            "downloadUrl": "https://espatv.github.io/atresdaily/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "TopZilla",
+            "description": "Rankings, información y vídeos de películas y series. Busca, filtra y guarda en tu biblioteca de Kodi con un solo clic.",
+            "applicationCategory": "VideoApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/topzilla.jpg",
+            "downloadUrl": "https://espatv.github.io/topzilla/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "StreamNinja",
+            "description": "Envía URLs a Kodi desde el móvil o PC. Soporta YouTube, Dailymotion, AceStream, torrents y casi cualquier enlace de vídeo.",
+            "applicationCategory": "VideoApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/streamninja.jpg",
+            "downloadUrl": "https://espatv.github.io/estreamninja/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 6,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "loiolink",
+            "description": "Centro de control web para Kodi: mando a distancia, streaming al móvil, escáner web, gestión de favoritos y copias de seguridad, sin apps ni registro.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/loiolink.jpg",
+            "downloadUrl": "https://loiolo.io/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 7,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Flow FavManager",
+            "description": "Gestión avanzada de favoritos en Kodi: organiza, personaliza, haz copias de seguridad y añade favoritos desde el menú contextual.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/flowfav.png",
+            "downloadUrl": "https://fullstackcurso.github.io/Flow-FavManager/",
+            "inLanguage": "es"
+          }
+        },
+        {
+          "@type": "ListItem", "position": 8,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "LoioLog",
+            "description": "Visor avanzado de logs de Kodi con colores por severidad. Filtra, exporta, comparte y compara errores entre sesiones.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Kodi",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://espatv.github.io/espatv/img/loiolog.png",
+            "downloadUrl": "https://loioloio.github.io/loiolog/",
+            "inLanguage": "es"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        (function () {
+            var r = document.documentElement;
+            var t = localStorage.getItem('espatv-theme');
+            var p = localStorage.getItem('espatv-palette');
+            var knownP = ['teal', 'indigo', 'burgundy', 'forest', 'terracotta', 'noche'];
+            if (t === 'light' || t === 'dark') r.setAttribute('data-theme', t);
+            if (knownP.includes(p)) r.setAttribute('data-palette', p);
+        })();
+    </script>
     <style>
+        :root {
+            --bg: #f5f4f1;
+            --surface: #ffffff;
+            --surface-2: #ecebe6;
+            --code-bg: #edece7;
+            --text: #22251f;
+            --text-soft: #565a52;
+            --text-mute: #8c8e85;
+            --border: #e3e1d9;
+            --warn: #a96e1a;
+            --warn-soft: #f4ecdd;
+            --warn-border: #e1cea4;
+            --shadow: 0 1px 3px rgba(28, 30, 26, .07);
+            --shadow-md: 0 6px 18px rgba(28, 30, 26, .10);
+            --shadow-lg: 0 12px 32px rgba(28, 30, 26, .18);
+            --espa-grad:     linear-gradient(to right, #d97070 0%, #ffe082 100%);
+        }
+
+        [data-theme="dark"] {
+            --bg: #191b18;
+            --surface: #212420;
+            --surface-2: #2b2e29;
+            --code-bg: #282b26;
+            --text: #e9e8e2;
+            --text-soft: #abaca3;
+            --text-mute: #7f817a;
+            --border: #33352f;
+            --warn: #d49a4f;
+            --warn-soft: #2a2316;
+            --warn-border: #4a3f27;
+            --shadow: 0 1px 3px rgba(0, 0, 0, .3);
+            --shadow-md: 0 6px 18px rgba(0, 0, 0, .35);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, .55);
+            --espa-grad:     linear-gradient(to right, #ffb3b3 0%, #ffe699 100%);
+        }
+
+        [data-palette="teal"] {
+            --primary: #136b5e;
+            --primary-strong: #0e564c;
+            --primary-soft: #e4efec;
+            --hero: #114a43;
+            --hero-accent: #9ae9d9;
+            --tool: #356b3f;
+            --tool-soft: #e6efe5;
+        }
+
+        [data-palette="indigo"] {
+            --primary: #37548f;
+            --primary-strong: #2b4373;
+            --primary-soft: #e7eaf3;
+            --hero: #283c6e;
+            --hero-accent: #b4c9ff;
+            --tool: #136b5e;
+            --tool-soft: #e4efec;
+        }
+
+        [data-palette="burgundy"] {
+            --primary: #8a3144;
+            --primary-strong: #6f2737;
+            --primary-soft: #f3e6e9;
+            --hero: #5e2330;
+            --hero-accent: #ffb8c5;
+            --tool: #6b4a00;
+            --tool-soft: #f5eedb;
+        }
+
+        [data-palette="forest"] {
+            --primary: #356b3f;
+            --primary-strong: #2a5532;
+            --primary-soft: #e6efe5;
+            --hero: #274a2c;
+            --hero-accent: #a3e9ae;
+            --tool: #136b5e;
+            --tool-soft: #e4efec;
+        }
+
+        [data-palette="terracotta"] {
+            --primary: #a85534;
+            --primary-strong: #8a4429;
+            --primary-soft: #f5e9e2;
+            --hero: #7a3d24;
+            --hero-accent: #ffc4ab;
+            --tool: #356b3f;
+            --tool-soft: #e6efe5;
+        }
+
+        [data-palette="noche"] {
+            --primary: #0288d1;
+            --primary-strong: #0277bd;
+            --primary-soft: #e1f5fe;
+            --hero: #01579b;
+            --hero-accent: #81d4fa;
+            --tool: #00796b;
+            --tool-soft: #e0f2f1;
+        }
+
+        [data-theme="dark"][data-palette="teal"] {
+            --primary: #58b4a4;
+            --primary-strong: #74c4b6;
+            --primary-soft: #17302c;
+            --tool: #6fb277;
+            --tool-soft: #1b2c1d;
+        }
+
+        [data-theme="dark"][data-palette="indigo"] {
+            --primary: #90a1d6;
+            --primary-strong: #aab6df;
+            --primary-soft: #1f2438;
+            --tool: #58b4a4;
+            --tool-soft: #17302c;
+        }
+
+        [data-theme="dark"][data-palette="burgundy"] {
+            --primary: #cf7b8b;
+            --primary-strong: #dc97a4;
+            --primary-soft: #321c21;
+            --tool: #d68f6b;
+            --tool-soft: #2e2018;
+        }
+
+        [data-theme="dark"][data-palette="forest"] {
+            --primary: #6fb277;
+            --primary-strong: #8bc391;
+            --primary-soft: #1b2c1d;
+            --tool: #58b4a4;
+            --tool-soft: #17302c;
+        }
+
+        [data-theme="dark"][data-palette="terracotta"] {
+            --primary: #d68f6b;
+            --primary-strong: #e0a484;
+            --primary-soft: #2e2018;
+            --tool: #6fb277;
+            --tool-soft: #1b2c1d;
+        }
+
+        [data-theme="dark"][data-palette="noche"] {
+
+            --bg: #1c1b1f;
+            --surface: #2b2930;
+            --surface-2: #36343b;
+            --code-bg: #2b2930;
+            --text: #e6e1e5;
+            --text-soft: #cac4d0;
+            --text-mute: #938f99;
+            --border: #49454f;
+            --warn: #ffb77a;
+            --warn-soft: rgba(255, 183, 122, .07);
+            --warn-border: rgba(255, 183, 122, .22);
+            --shadow: 0 1px 3px rgba(0, 0, 0, .4);
+            --shadow-md: 0 6px 18px rgba(0, 0, 0, .5);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, .7);
+
+            --primary: #4fc3f7;
+            --primary-strong: #81d4fa;
+            --primary-soft: rgba(79, 195, 247, .14);
+            --hero: #13111a;
+            --hero-accent: #bce9ff;
+            --tool: #6dd58c;
+            --tool-soft: rgba(109, 213, 140, .12);
+        }
+
+        html.a11y-contrast {
+            --text: #000;
+            --text-soft: #000;
+            --text-mute: #333;
+            --bg: #fff;
+            --surface: #fff;
+            --border: #000;
+        }
+
+        html.a11y-contrast[data-theme="dark"] {
+            --text: #fff;
+            --text-soft: #fff;
+            --text-mute: #ccc;
+            --bg: #000;
+            --surface: #000;
+            --border: #fff;
+        }
+
+        html.a11y-bold body {
+            font-weight: 600;
+        }
+
+        html.a11y-large {
+            font-size: 19px;
+        }
+
+        html.a11y-large body {
+            font-size: 19px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
         }
-        
-        .container {
-            max-width: 1000px;
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-size: 17px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            transition: background .2s, color .2s;
+        }
+
+        ::selection {
+            background: var(--primary-soft);
+            color: var(--primary-strong);
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 16px;
+            height: 52px;
+            box-shadow: var(--shadow);
+        }
+
+        .topbar-brand {
+            flex: 1;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar-brand em {
+            font-style: normal;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .kodi-k-inline {
+            display: inline-block;
+            height: 1.12em;
+            width: auto;
+            vertical-align: -0.26em;
+            margin-left: 0.14em;
+            margin-right: -0.22em;
+        }
+
+        .espa-text {
+            background: var(--espa-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .hero h1 .espa-text {
+            background: linear-gradient(to right, #ffb3b3 0%, #ffe699 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tb-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 36px;
+            padding: 0 11px;
+            border: 1px solid var(--border);
+            background: var(--surface-2);
+            color: var(--text-soft);
+            border-radius: 8px;
+            cursor: pointer;
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: color .15s, border-color .15s, background .15s;
+        }
+
+        .tb-btn:hover {
+            color: var(--text);
+            border-color: var(--primary);
+        }
+
+        .tb-btn svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        .tb-swatch {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+
+        .share-wrap,
+        .a11y-wrap {
+            position: relative;
+        }
+
+        .share-panel {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            width: min(280px, calc(100vw - 2rem));
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 14px;
+            display: none;
+            z-index: 200;
+        }
+
+        .share-panel.show {
+            display: block;
+        }
+
+        .share-preview {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 10px 12px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .share-logo {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .share-info {
+            min-width: 0;
+        }
+
+        .share-info strong {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .share-info span {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-mute);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .share-url-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .share-url-row span {
+            flex: 1;
+            font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+            font-size: 0.75rem;
+            color: var(--primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .share-copy {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-mute);
+            cursor: pointer;
+            transition: color .15s, border-color .15s, background .15s;
+        }
+
+        .share-copy:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .share-copy.done {
+            color: #fff;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .share-copy svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .share-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px;
+        }
+
+        .share-svc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 9px 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--surface-2);
+            color: var(--text-soft);
+            text-decoration: none;
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color .15s, border-color .15s, background .15s;
+        }
+
+        .share-svc:hover {
+            color: var(--text);
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+
+        .share-svc svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .a11y-wrap {
+            position: relative;
+        }
+
+        .a11y-panel {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            width: min(240px, calc(100vw - 2rem));
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            padding: 4px;
+            display: none;
+            z-index: 200;
+        }
+
+        .a11y-panel.show {
+            display: block;
+        }
+
+        .a11y-panel-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-mute);
+            padding: 6px 10px 4px;
+        }
+
+        .a11y-opt {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            padding: 8px 10px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-soft);
+            font: inherit;
+            font-size: 0.87rem;
+            border-radius: 6px;
+            text-align: left;
+            transition: background .12s, color .12s;
+        }
+
+        .a11y-opt:hover {
+            background: var(--surface-2);
+            color: var(--text);
+        }
+
+        .a11y-opt span:first-child {
+            flex: 1;
+        }
+
+        .a11y-sw {
+            width: 34px;
+            height: 20px;
+            border-radius: 999px;
+            background: var(--border);
+            position: relative;
+            flex-shrink: 0;
+            transition: background .15s;
+        }
+
+        .a11y-sw::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform .15s;
+        }
+
+        .a11y-opt[aria-pressed="true"] .a11y-sw {
+            background: var(--primary);
+        }
+
+        .a11y-opt[aria-pressed="true"] .a11y-sw::after {
+            transform: translateX(14px);
+        }
+
+        .hero {
+            background: var(--hero);
+            color: #f3f3ee;
+            text-align: center;
+            padding: clamp(3.4rem, 8vw, 5.6rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .hero-inner {
+            max-width: 760px;
             margin: 0 auto;
         }
-        
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        
-        .repos-grid {
+
+        .hero-mark {
+            width: 66px;
+            height: 66px;
+            margin: 0 auto 26px;
+            border-radius: 16px;
+            background: rgba(154, 233, 217, .12);
+            border: 1px solid rgba(154, 233, 217, .25);
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            place-items: center;
         }
-        
-        .repo-card {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
+
+        .hero-mark svg {
+            width: 32px;
+            height: 32px;
+            color: var(--hero-accent);
         }
-        
-        .repo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 5.5vw, 3.1rem);
+            font-weight: 600;
+            line-height: 1.14;
+            letter-spacing: -0.018em;
+            color: #fff;
         }
-        
-        .repo-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-            word-break: break-word;
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--hero-accent);
         }
-        
-        .repo-card p {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            flex-grow: 1;
+
+        .hero-sub {
+            margin: 1.1rem auto 0;
+            max-width: 52ch;
+            font-size: clamp(1rem, 2.4vw, 1.15rem);
+            font-weight: 300;
+            color: rgba(255, 255, 255, .8);
             line-height: 1.5;
         }
-        
-        .repo-card a {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1.8rem;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .07);
+            border: 1px solid rgba(255, 255, 255, .15);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, .88);
+        }
+
+        .pill .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--hero-accent);
+        }
+
+        .wrap {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: clamp(2.4rem, 5vw, 3.8rem) 20px 5rem;
+        }
+
+        .grid {
+            columns: 3 340px;
+            column-gap: 18px;
+        }
+
+        .card {
+            break-inside: avoid;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .45s ease, transform .45s ease, box-shadow .22s, border-color .22s;
+        }
+
+        .card.in {
+            opacity: 1;
+            transform: none;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .card-top {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            padding: 20px 20px 16px;
+        }
+
+        .addon-icon {
+            width: 68px;
+            height: 68px;
+            border-radius: 14px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+        }
+
+        .title-col {
+            flex: 1;
+            min-width: 0;
+            padding-top: 2px;
+        }
+
+        .name-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .card-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .chip {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 2px 9px;
+            border-radius: 999px;
+        }
+
+        .chip.v {
+            color: var(--primary);
+            background: var(--primary-soft);
+        }
+
+        .chip.t {
+            color: var(--tool);
+            background: var(--tool-soft);
+        }
+
+        .card-sub {
+            margin-top: 3px;
+            font-size: 0.86rem;
+            color: var(--text-mute);
+            line-height: 1.4;
+        }
+
+        .div {
+            height: 1px;
+            background: var(--border);
+            margin: 0 20px;
+        }
+
+        .card-body {
+            padding: 16px 20px;
+            font-size: 0.94rem;
+            color: var(--text-soft);
+            line-height: 1.62;
+            flex: 1;
+        }
+
+        .feat-lbl {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-mute);
+            margin: 14px 0 8px;
+        }
+
+        .feat {
+            list-style: none;
+            display: grid;
+            gap: 9px;
+        }
+
+        .feat li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            line-height: 1.5;
+        }
+
+        .feat li svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 3px;
+            color: var(--primary);
+        }
+
+        .feat li b {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .feat-more {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .source {
+            margin: 0 20px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 13px;
+            border-radius: 8px;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+        }
+
+        .src-lbl {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--text-mute);
+            flex-shrink: 0;
+        }
+
+        .src-url {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.78rem;
+            color: var(--primary);
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .copy-btn {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-mute);
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: color .15s, border-color .15s, background .15s;
+        }
+
+        .copy-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .copy-btn.done {
+            color: #fff;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .copy-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .card-foot {
+            padding: 0 20px 20px;
+        }
+
+        .btn-install {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font: inherit;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            gap: 8px;
+            transition: background .18s;
+        }
+
+        .btn-install:hover {
+            background: var(--primary-strong);
+        }
+
+        .btn-install .lft {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .btn-install .lft svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-install .arr {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            transition: transform .18s;
+        }
+
+        .btn-install:hover .arr {
+            transform: translateX(3px);
+        }
+
+        [data-theme="dark"] .btn-install {
+            background: var(--hero);
+            color: var(--hero-accent);
+        }
+
+        [data-theme="dark"] .btn-install:hover {
+            background: var(--hero-accent);
+            color: var(--hero);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(15, 17, 14, .55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .22s;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .dialog {
+            width: 100%;
+            max-width: 540px;
+            max-height: 88vh;
+            background: var(--surface);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(.96) translateY(14px);
+            transition: transform .28s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .modal-overlay.open .dialog {
+            transform: none;
+        }
+
+        .modal-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 20px 16px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .modal-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 11px;
+            object-fit: cover;
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .modal-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .modal-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .modal-sub {
+            font-size: 0.84rem;
+            color: var(--text-mute);
+            margin-top: 1px;
+        }
+
+        .modal-x {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            color: var(--text-mute);
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background .15s, color .15s;
+        }
+
+        .modal-x:hover {
+            background: var(--surface-2);
+            color: var(--text);
+        }
+
+        .modal-x svg {
+            width: 19px;
+            height: 19px;
+        }
+
+        .modal-body {
+            overflow-y: auto;
+            padding: 22px 20px;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .step-lbl {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-mute);
+            margin-bottom: 4px;
+        }
+
+        .steps {
+            list-style: none;
+            display: grid;
+            gap: 0;
+        }
+
+        .steps li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            line-height: 1.55;
+        }
+
+        .steps li:last-child {
+            border-bottom: none;
+        }
+
+        .snum {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--primary-soft);
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .stxt {
+            flex: 1;
+        }
+
+        .stxt strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .stxt code {
+            font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+            font-size: 0.84em;
+            background: var(--code-bg);
+            color: var(--primary);
+            padding: 2px 6px;
             border-radius: 5px;
-            transition: background 0.3s;
-            align-self: flex-start;
+            word-break: break-all;
         }
-        
-        .repo-card a:hover {
-            background: #764ba2;
+
+        .note {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: var(--warn-soft);
+            border: 1px solid var(--warn-border);
+            border-left: 3px solid var(--warn);
+            font-size: 0.88rem;
+            color: var(--text);
+            line-height: 1.5;
         }
-        
-        .repo-language {
-            display: inline-block;
-            background: #f0f0f0;
-            color: #666;
-            padding: 4px 8px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            margin-top: 10px;
+
+        .note svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--warn);
         }
-        
-        .footer {
+
+        .note code {
+            font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+            font-size: 0.82em;
+            background: rgba(169, 110, 26, .14);
+            padding: 1px 5px;
+            border-radius: 4px;
+            word-break: break-all;
+        }
+
+        footer {
             text-align: center;
-            color: white;
-            opacity: 0.8;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 32px 24px 48px;
+            border-top: 1px solid var(--border);
+            font-size: 0.88rem;
+            color: var(--text-mute);
+        }
+
+        footer strong {
+            color: var(--text-soft);
+            font-weight: 600;
+        }
+
+        .topbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .burger-btn {
+            display: none;
+        }
+
+        .burger-btn .ic-close {
+            display: none;
+        }
+
+        .burger-btn[aria-expanded="true"] .ic-burger {
+            display: none;
+        }
+
+        .burger-btn[aria-expanded="true"] .ic-close {
+            display: block;
+        }
+
+        @media (max-width: 639px) {
+            .topbar-actions {
+                display: none;
+                position: fixed;
+                top: 52px;
+                left: 0;
+                right: 0;
+                background: var(--surface);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px 16px 14px;
+                gap: 8px;
+                box-shadow: var(--shadow-md);
+                z-index: 89;
+            }
+
+            .topbar-actions.mobile-open {
+                display: flex;
+            }
+
+            .burger-btn {
+                display: flex;
+            }
+
+            .topbar-actions .tb-btn {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 0 14px;
+                height: 42px;
+            }
+
+            .topbar-actions .a11y-wrap,
+            .topbar-actions .share-wrap {
+                width: 100%;
+            }
+
+            .topbar-actions .a11y-panel,
+            .topbar-actions .share-panel {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                border-radius: 8px;
+                margin-top: 2px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .wrap {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .card-top {
+                padding: 16px 16px 12px;
+            }
+
+            .card-body {
+                padding: 12px 16px;
+            }
+
+            .source {
+                margin: 0 16px 14px;
+            }
+
+            .card-foot {
+                padding: 0 16px 16px;
+            }
+
+            .div {
+                margin: 0 16px;
+            }
+
+            .modal-overlay {
+                padding: 12px;
+            }
+
+            .dialog {
+                border-radius: 12px;
+            }
+        }
+
+        .icon-btn-video {
+            border: none;
+            padding: 0;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            border-radius: 14px;
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .icon-btn-video .addon-icon {
+            display: block;
+        }
+
+        .play-badge {
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, .45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity .18s;
+        }
+
+        .card:hover .play-badge,
+        .icon-btn-video:focus-visible .play-badge {
+            opacity: 1;
+        }
+
+        .play-badge svg {
+            width: 26px;
+            height: 26px;
+            color: #fff;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .6));
+        }
+
+        .video-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 110;
+            background: rgba(0, 0, 0, .82);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .22s;
+        }
+
+        .video-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .video-dialog {
+            width: 90%;
+            max-width: 360px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transform: scale(.96) translateY(14px);
+            transition: transform .28s cubic-bezier(.2, .8, .2, 1);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, .8);
+        }
+
+        .video-overlay.open .video-dialog {
+            transform: none;
+        }
+
+        .video-dialog video {
+            width: 100%;
+            display: block;
+            max-height: 50vh;
+        }
+
+        .video-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            background: rgba(0, 0, 0, .55);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: background .15s;
+            z-index: 1;
+        }
+
+        .video-close:hover {
+            background: rgba(0, 0, 0, .9);
+        }
+
+        .video-close svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card {
+                opacity: 1;
+                transform: none;
+                transition: box-shadow .2s, border-color .2s;
+            }
+
+            .modal-overlay,
+            .video-overlay,
+            .dialog,
+            .video-dialog,
+            .btn-install .arr {
+                transition: none;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🎬 EspaTV</h1>
-            <p>Repositorios de GitHub</p>
-        </div>
-        
-        <div class="repos-grid">
-            <div class="repo-card">
-                <h3>atresdaily</h3>
-                <p>Repositorio atresdaily</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/atresdaily" target="_blank">Ver repositorio →</a>
+
+    <div class="topbar">
+        <span class="topbar-brand"><span class="espa-text">Espa</span><em><svg class="kodi-k-inline" viewBox="0 0 24 24"
+                    fill="none">
+                    <defs>
+                        <linearGradient id="kodi-grad-inline" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2fd5f6" />
+                            <stop offset="40%" stop-color="#17b2e7" />
+                            <stop offset="100%" stop-color="#0d7fa9" />
+                        </linearGradient>
+                        <mask id="k-mask-inline">
+                            <rect x="3.6" y="3.6" width="16.8" height="16.8" rx="2.5" ry="2.5"
+                                transform="rotate(45 12 12)" fill="white" />
+                            <path
+                                d="M12.03.047c-.226 0-.452.107-.669.324-.922.922-1.842 1.845-2.763 2.768-.233.233-.455.48-.703.695-.31.267-.405.583-.399.988.02 1.399.008 2.799.008 4.198 0 1.453-.002 2.907 0 4.36 0 .11.002.223.03.327.087.337.303.393.546.15 1.31-1.31 2.618-2.622 3.928-3.933l4.449-4.453c.43-.431.43-.905 0-1.336L12.697.37c-.216-.217-.442-.324-.668-.324zm7.224 7.23c-.223 0-.445.104-.65.309L14.82 11.37c-.428.429-.427.895 0 1.322l3.76 3.766c.44.44.908.44 1.346.002 1.215-1.216 2.427-2.433 3.644-3.647.182-.18.353-.364.43-.615v-.33c-.077-.251-.246-.436-.428-.617-1.224-1.22-2.443-2.445-3.666-3.668-.205-.205-.429-.307-.652-.307zM4.18 7.611c-.086.014-.145.094-.207.157L.209 11.572c-.28.284-.278.677.004.96l2.043 2.046c.59.59 1.177 1.182 1.767 1.772.169.168.33.139.416-.084.044-.114.062-.242.063-.364.004-1.283.004-2.567.004-3.851h-.002V8.184c0-.085-.01-.169-.022-.252-.019-.135-.072-.258-.207-.309a.186.186 0 0 0-.095-.012zm7.908 6.838c-.224 0-.447.106-.656.315L7.66 18.537c-.433.434-.433.899.002 1.334 1.215 1.216 2.43 2.43 3.643 3.649.18.18.361.354.611.433h.33c.244-.069.423-.226.598-.402 1.222-1.23 2.45-2.453 3.676-3.68.43-.43.427-.905-.004-1.338l-3.772-3.773c-.208-.208-.432-.311-.656-.31z"
+                                fill="black" />
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="24" height="24" fill="url(#kodi-grad-inline)" mask="url(#k-mask-inline)" />
+                </svg>odi</em></span>
+
+        <div class="topbar-actions" id="topbarActions">
+
+            <button class="tb-btn theme-btn" aria-label="Cambiar tema">
+                <svg id="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+                <span class="theme-label"></span>
+            </button>
+
+            <button class="tb-btn" id="paletteBtn" aria-label="Cambiar color">
+                <span class="tb-swatch" id="paletteSwatch"></span>
+                <span id="paletteLabel"></span>
+            </button>
+
+            <div class="a11y-wrap">
+                <button class="tb-btn" id="a11yBtn" aria-label="Accesibilidad" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="5" r="1.5" fill="currentColor" stroke="none" />
+                        <path d="M5 8h14M12 8v7m-4 4 4-4 4 4" />
+                    </svg>
+                    <span>Accesibilidad</span>
+                </button>
+                <div class="a11y-panel" id="a11yPanel" role="menu">
+                    <div class="a11y-panel-title">Opciones de visualización</div>
+                    <button class="a11y-opt" data-a11y="contrast" aria-pressed="false" role="menuitemcheckbox">
+                        <span>Alto contraste</span><span class="a11y-sw"></span>
+                    </button>
+                    <button class="a11y-opt" data-a11y="bold" aria-pressed="false" role="menuitemcheckbox">
+                        <span>Texto en negrita</span><span class="a11y-sw"></span>
+                    </button>
+                    <button class="a11y-opt" data-a11y="large" aria-pressed="false" role="menuitemcheckbox">
+                        <span>Texto más grande</span><span class="a11y-sw"></span>
+                    </button>
+                </div>
             </div>
-            
-            <div class="repo-card">
-                <h3>espa-repo</h3>
-                <p>Repositorio de espa</p>
-                <a href="https://github.com/espatv/espa-repo" target="_blank">Ver repositorio →</a>
+
+            <div class="share-wrap">
+                <button class="tb-btn" id="shareBtn" aria-label="Compartir" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                        <polyline points="16 6 12 2 8 6" />
+                        <line x1="12" y1="2" x2="12" y2="15" />
+                    </svg>
+                    <span>Compartir</span>
+                </button>
+                <div class="share-panel" id="sharePanel">
+                    <div class="share-preview">
+                        <img class="share-logo" src="img/espatv.png" alt="EspaTV">
+                        <div class="share-info">
+                            <strong>EspaKodi · Addons para Kodi</strong>
+                            <span>TV, series, películas, streaming y herramientas</span>
+                        </div>
+                    </div>
+                    <div class="share-url-row">
+                        <span id="shareUrlText"></span>
+                        <button class="share-copy" id="shareCopyBtn" aria-label="Copiar enlace">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="share-btns">
+                        <a class="share-svc" id="shareWhatsApp" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <a class="share-svc" id="shareTelegram" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                            </svg>
+                            Telegram
+                        </a>
+                        <a class="share-svc" id="shareX" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                            X / Twitter
+                        </a>
+                        <a class="share-svc" id="shareEmail" href="#">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="repo-card">
-                <h3>espadaily</h3>
-                <p>Explorador de TV española y Buscador Universal. Encuentra, reproduce y descarga contenido de vídeo disponible públicamente en internet.</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/espadaily" target="_blank">Ver repositorio →</a>
+        </div><!-- /acciones-barra-superior -->
+
+        <button class="burger-btn tb-btn" id="burgerBtn" aria-label="Menú" aria-expanded="false">
+            <svg class="ic-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+            <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="overlayClick(event)">
+        <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+            <div class="modal-head">
+                <img class="modal-icon" id="modal-icon" src="" alt="">
+                <div class="modal-info">
+                    <div class="modal-name" id="modal-name"></div>
+                    <div class="modal-sub" id="modal-sub"></div>
+                </div>
+                <button class="modal-x" onclick="closeModal()" aria-label="Cerrar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
             </div>
-            
-            <div class="repo-card">
-                <h3>espatv</h3>
-                <p>Repositorio principal EspaTV</p>
-                <a href="https://github.com/espatv/espatv" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>espatv-addon</h3>
-                <p>Repositorio del addon EspaTV para Kodi. TV, vídeos, radio, podcast en castellano, etc.</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/espatv-addon" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>espatv_repo</h3>
-                <p>Repositorio unificado.</p>
-                <a href="https://github.com/espatv/espatv_repo" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>estreamninja</h3>
-                <p>Repositorio StreamNinja</p>
-                <a href="https://github.com/espatv/estreamninja" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>flowfav</h3>
-                <p>Flow FavManager is an advanced favorites manager for Kodi. The project has been transferred to https://github.com/loioloio</p>
-                <a href="https://github.com/espatv/flowfav" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>loiolink</h3>
-                <p>Repositorio loiolink</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/loiolink" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>loiolog</h3>
-                <p>A complete set of tools to view, filter, search, analyze and export Kodi system logs.</p>
-                <a href="https://github.com/espatv/loiolog" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>topzilla</h3>
-                <p>Enciclopedia de cine y series para Kodi. Rankings, información, tráilers...</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/topzilla" target="_blank">Ver repositorio →</a>
-            </div>
-            
-            <div class="repo-card">
-                <h3>web</h3>
-                <p>Sitio web principal</p>
-                <span class="repo-language">HTML</span>
-                <a href="https://github.com/espatv/web" target="_blank">Ver repositorio →</a>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2026 EspaTV - Todos los repositorios disponibles</p>
+            <div class="modal-body" id="modal-body"></div>
         </div>
     </div>
+
+    <div class="video-overlay" id="videoOverlay" onclick="closeVideo()">
+        <div class="video-dialog" onclick="event.stopPropagation()">
+            <button class="video-close" onclick="closeVideo()" aria-label="Cerrar vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <video id="videoPlayer" controls playsinline preload="none"></video>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <h1><span class="espa-text">Espa</span><em><svg class="kodi-k-inline" viewBox="0 0 24 24" fill="none">
+                        <rect x="0" y="0" width="24" height="24" fill="url(#kodi-grad-inline)"
+                            mask="url(#k-mask-inline)" />
+                    </svg>odi</em></h1>
+            <p class="hero-sub">Addons gratuitos para Kodi en castellano: TDT, RTVE a la carta, catálogos de televisión
+                española, rankings de películas y series, gestión de favoritos, control remoto web y streaming a
+                cualquier pantalla.</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <div class="grid">
+
+            <!-- EspaTV -->
+            <div class="card reveal" data-name="EspaTV" data-sub="Todo en uno para contenido en castellano"
+                data-icon="img/espatv.png">
+                <div class="card-top">
+                    <button class="icon-btn-video" data-video="media/espatv.mp4" aria-label="Ver demo de EspaTV">
+                        <img class="addon-icon" src="img/espatv.png" alt="EspaTV">
+                        <span class="play-badge"><svg viewBox="0 0 24 24">
+                                <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+                            </svg></span>
+                    </button>
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">EspaTV</h2><span class="chip v">Vídeo</span>
+                        </div>
+                        <div class="card-sub">Todo en uno para contenido en castellano</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">TDT, RTVE a la carta, búsqueda en YouTube y Dailymotion, catálogo de vídeos,
+                    radio, podcasts, reproducción de enlaces, noticias, meteorología, agenda deportiva y mucho más.
+                </div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://espakodi.github.io/espatv/</span>
+                    <button class="copy-btn" data-url="https://espakodi.github.io/espatv/" aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://espakodi.github.io/espatv/</code>, nómbrala <code>espatv</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>espatv</code> →
+                                <code>repository.espatv-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>EspaTV Repository</strong> → <strong>Complementos de
+                                    vídeo</strong> → <strong>EspaTV</strong> → <strong>Instalar</strong></span></li>
+                    </ol>
+                    <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes →
+                            Sistema → Complementos.</span></div>
+                </template>
+            </div>
+
+            <!-- EspaDaily -->
+            <div class="card reveal" data-name="EspaDaily" data-sub="Explorador de TV española con buscador universal"
+                data-icon="img/espadaily.jpg">
+                <div class="card-top">
+                    <img class="addon-icon" src="img/espadaily.jpg" alt="EspaDaily">
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">EspaDaily</h2><span class="chip v">Vídeo</span>
+                        </div>
+                        <div class="card-sub">Explorador de TV española con buscador universal</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">EspaDaily permite explorar catálogos de televisión española y buscar vídeos
+                    públicos en internet que coincidan. No aloja contenido, solo actúa como buscador.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://espatv.github.io/espadaily/</span>
+                    <button class="copy-btn" data-url="https://espatv.github.io/espadaily/"
+                        aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://espatv.github.io/espadaily/</code>, nómbrala <code>espadaily</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>espadaily</code> →
+                                <code>repository.espadaily-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>EspaDaily Repository</strong> → <strong>Complementos
+                                    de vídeo</strong> → <strong>EspaDaily</strong> → <strong>Instalar</strong></span>
+                        </li>
+                    </ol>
+                    <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        </svg><span>Sin el repositorio el addon funciona, pero no recibirás actualizaciones
+                            automáticas.</span></div>
+                </template>
+            </div>
+
+            <!-- AtresDaily -->
+            <div class="card reveal" data-name="AtresDaily" data-sub="Cliente no oficial de A3Player"
+                data-icon="img/atresdaily.jpg">
+                <div class="card-top">
+                    <button class="icon-btn-video" data-video="media/atresdaily.mp4"
+                        aria-label="Ver demo de AtresDaily">
+                        <img class="addon-icon" src="img/atresdaily.jpg" alt="AtresDaily">
+                        <span class="play-badge"><svg viewBox="0 0 24 24">
+                                <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+                            </svg></span>
+                    </button>
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">AtresDaily</h2><span class="chip v">Vídeo</span>
+                        </div>
+                        <div class="card-sub">Cliente no oficial de A3Player</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">Explora el contenido de A3Player con la potencia de AtresDaily. Búsquedas
+                    inteligentes y programación en directo.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://espatv.github.io/atresdaily/</span>
+                    <button class="copy-btn" data-url="https://espatv.github.io/atresdaily/"
+                        aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://espatv.github.io/atresdaily/</code>, nómbrala <code>atresdaily</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>atresdaily</code> →
+                                <code>repository.atresdaily-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>AtresDaily Repository</strong> → <strong>Complementos
+                                    de vídeo</strong> → <strong>AtresDaily</strong> → <strong>Instalar</strong></span>
+                        </li>
+                    </ol>
+                    <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes →
+                            Sistema → Complementos.</span></div>
+                </template>
+            </div>
+
+            <!-- TopZilla -->
+            <div class="card reveal" data-name="TopZilla" data-sub="¿Qué vemos hoy?" data-icon="img/topzilla.jpg">
+                <div class="card-top">
+                    <img class="addon-icon" src="img/topzilla.jpg" loading="lazy" alt="TopZilla">
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">TopZilla</h2><span class="chip v">Vídeo</span><span
+                                class="chip t">Herramienta</span>
+                        </div>
+                        <div class="card-sub">¿Qué vemos hoy?</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">TopZilla muestra rankings, información y vídeos relacionados de películas y
+                    series. Además permite buscarlas, filtrarlas y guardar en tu biblioteca o consultar su ficha con un
+                    solo clic, estés donde estés en tu Kodi.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://espatv.github.io/topzilla/</span>
+                    <button class="copy-btn" data-url="https://espatv.github.io/topzilla/" aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://espatv.github.io/topzilla/</code>, nómbrala <code>topzilla</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>topzilla</code> →
+                                <code>repository.topzilla-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>TopZilla Repository</strong> → <strong>Complementos
+                                    de vídeo</strong> → <strong>TopZilla</strong> → <strong>Instalar</strong></span>
+                        </li>
+                    </ol>
+                    <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        </svg><span>Sin el repositorio TopZilla funciona, pero no recibirá actualizaciones
+                            automáticas.</span></div>
+                </template>
+            </div>
+
+            <!-- StreamNinja -->
+            <div class="card reveal" data-name="StreamNinja" data-sub="Reproductor de URLs"
+                data-icon="img/streamninja.jpg">
+                <div class="card-top">
+                    <button class="icon-btn-video" data-video="media/streamninja.mp4"
+                        aria-label="Ver demo de StreamNinja">
+                        <img class="addon-icon" src="img/streamninja.jpg" loading="lazy" alt="StreamNinja">
+                        <span class="play-badge"><svg viewBox="0 0 24 24">
+                                <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+                            </svg></span>
+                    </button>
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">StreamNinja</h2><span class="chip v">Vídeo</span>
+                        </div>
+                        <div class="card-sub">Reproductor de URLs</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">StreamNinja permite enviar URLs a Kodi desde un móvil o PC mediante una web local
+                    efímera, o bien recibirlas directamente desde otros addons. Soporta Dailymotion, YouTube, AceStream,
+                    torrents y casi cualquier enlace de vídeo.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://espatv.github.io/estreamninja/</span>
+                    <button class="copy-btn" data-url="https://espatv.github.io/estreamninja/"
+                        aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://espatv.github.io/estreamninja/</code>, nómbrala <code>streamninja</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>streamninja</code>
+                                → <code>repository.streamninja-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>StreamNinja Repository</strong> →
+                                <strong>Complementos de vídeo</strong> → <strong>StreamNinja</strong> →
+                                <strong>Instalar</strong></span></li>
+                    </ol>
+                </template>
+            </div>
+
+            <!-- loiolink -->
+            <div class="card reveal" data-name="loiolink" data-sub="Centro de control web y navaja suiza para tu Kodi"
+                data-icon="img/loiolink.jpg">
+                <div class="card-top">
+                    <img class="addon-icon" src="img/loiolink.jpg" loading="lazy" alt="loiolink">
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">loiolink</h2><span class="chip t">Herramienta</span>
+                        </div>
+                        <div class="card-sub">Centro de control web y navaja suiza para tu Kodi</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">
+                    Un sistema privado y local que funciona sin instalar aplicaciones ni registrarse. Pensado para que
+                    Kodi sea más fácil y cómodo que nunca.
+                    <div class="feat-lbl">Características principales</div>
+                    <ul class="feat">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Mando a distancia:</b> controla lo que estás viendo, navega por los menús o
+                                consulta y gestiona tus addons desde la web.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Toda tu colección:</b> navega por tus películas, series y música desde el
+                                navegador y reprodúcelas en la TV.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Streaming de Kodi al móvil:</b> envía el vídeo desde el televisor para verlo
+                                en la pantalla de tu móvil, tablet o PC.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Favoritos:</b> elimina, reordena o edita accesos directos a películas, series
+                                o secciones de addons desde el navegador.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Escribe sin usar el mando:</b> escribe búsquedas o enlaces largos en el
+                                navegador y aparecen al instante en Kodi.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Copiar y pegar:</b> pega texto en buscadores de Kodi o copia nombres de
+                                elementos con el menú contextual.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Envío de vídeos, torrents, M3U o AceStream</b> para reproducirlos al vuelo,
+                                grabarlos o guardarlos en local.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Escáner web y Telegram:</b> rastrea páginas y canales de Telegram para
+                                recopilar y reproducir torrents, m3u y vídeos.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Instalación de addons:</b> envía ZIPs, repositorios o APKs desde el navegador
+                                para instalarlos al instante.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Grabación HLS:</b> graba transmisiones en directo o programa
+                                grabaciones.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Explorador de archivos:</b> navega por carpetas y gestiona fuentes.</span>
+                        </li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Apagado y reinicio:</b> apaga, reinicia o suspende el equipo
+                                remotamente.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg><span><b>Copia de seguridad:</b> guarda o restaura tus addons, favoritos y
+                                fuentes.</span></li>
+                    </ul>
+                    <div class="feat-more">¡Y mucho más! Pruébalo y descubre todo lo que puede hacer.</div>
+                </div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://loiolo.io/</span>
+                    <button class="copy-btn" data-url="https://loiolo.io/" aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://loiolo.io/</code>, nómbrala <code>loiolink</code> y confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>loiolink</code> →
+                                <code>repository.loiolink-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>loiolink Repository</strong> → <strong>Complementos
+                                    de programa</strong> → <strong>loiolink</strong> → <strong>Instalar</strong></span>
+                        </li>
+                    </ol>
+                    <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        </svg><span>Si la pantalla parece colgada tras instalar el ZIP, espera 10-15 s y reintenta.
+                            Fuente alternativa: <code>https://espatv.github.io/loiolink/</code></span></div>
+                </template>
+            </div>
+
+            <!-- Flow FavManager -->
+            <div class="card reveal" data-name="Flow FavManager" data-sub="Gestión avanzada de favoritos"
+                data-icon="img/flowfav.png">
+                <div class="card-top">
+                    <img class="addon-icon" src="img/flowfav.png" loading="lazy" alt="Flow FavManager">
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">Flow FavManager</h2><span class="chip t">Herramienta</span>
+                        </div>
+                        <div class="card-sub">Gestión avanzada de favoritos</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">Flow FavManager mejora la experiencia de gestión de favoritos en Kodi. Permite
+                    organizarlos, personalizar su apariencia y las acciones que realizan. Incluye herramientas de copia
+                    de seguridad, un editor intuitivo, perfiles y ordenación por secciones, con opción de añadirlos
+                    desde el menú contextual de Kodi.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://fullstackcurso.github.io/Flow-FavManager/</span>
+                    <button class="copy-btn" data-url="https://fullstackcurso.github.io/Flow-FavManager/"
+                        aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://fullstackcurso.github.io/Flow-FavManager/</code>, nómbrala
+                                <code>flowfav</code> y confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>flowfav</code> →
+                                <code>repository.flowfavmanager-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>Flow FavManager Repository</strong> →
+                                <strong>Complementos de programa</strong> → <strong>Flow FavManager</strong> →
+                                <strong>Instalar</strong></span></li>
+                    </ol>
+                </template>
+            </div>
+
+            <!-- LoioLog -->
+            <div class="card reveal" data-name="LoioLog" data-sub="Gestor avanzado de logs de Kodi"
+                data-icon="img/loiolog.png">
+                <div class="card-top">
+                    <button class="icon-btn-video" data-video="media/loiolog.mp4" aria-label="Ver demo de LoioLog">
+                        <img class="addon-icon" src="img/loiolog.png" loading="lazy" alt="LoioLog">
+                        <span class="play-badge"><svg viewBox="0 0 24 24">
+                                <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
+                            </svg></span>
+                    </button>
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">LoioLog</h2><span class="chip t">Herramienta</span>
+                        </div>
+                        <div class="card-sub">Gestor avanzado de logs de Kodi</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">Visualiza y busca en el log de Kodi con un visor de colores por severidad. Filtra
+                    por addon, texto o expresiones regulares. Exporta a TXT o JSON, comparte el log subiendo a internet
+                    o ábrelo en el móvil desde tu red local. Consulta estadísticas, compara errores entre sesiones y
+                    gestiona los logs anteriores.</div>
+                <div class="source">
+                    <span class="src-lbl">Fuente</span>
+                    <span class="src-url">https://loioloio.github.io/loiolog/</span>
+                    <button class="copy-btn" data-url="https://loioloio.github.io/loiolog/"
+                        aria-label="Copiar"></button>
+                </div>
+                <div class="card-foot">
+                    <button class="btn-install" onclick="openModal(this)">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Cómo instalar</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </div>
+                <template class="install-tpl">
+                    <div class="step-lbl">Instalación vía repositorio</div>
+                    <ol class="steps">
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
+                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                                <code>https://loioloio.github.io/loiolog/</code>, nómbrala <code>loiolog</code> y
+                                confirma</span></li>
+                        <li><span class="snum">3</span><span class="stxt">Ve a <strong>Complementos</strong> → icono de
+                                paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
+                        <li><span class="snum">4</span><span class="stxt">Selecciona la fuente <code>loiolog</code> →
+                                <code>repository.loiolog-x.x.x.zip</code></span></li>
+                        <li><span class="snum">5</span><span class="stxt">Ve a <strong>Instalar desde
+                                    repositorio</strong> → <strong>LoioLog Repository</strong> → <strong>Complementos de
+                                    programa</strong> → <strong>LoioLog</strong> → <strong>Instalar</strong></span></li>
+                    </ol>
+                </template>
+            </div>
+
+        </div>
+    </main>
+
+    <footer><strong><span class="espa-text">Espa</span><em><svg class="kodi-k-inline" viewBox="0 0 24 24" fill="none">
+                    <rect x="0" y="0" width="24" height="24" fill="url(#kodi-grad-inline)" mask="url(#k-mask-inline)" />
+                </svg>odi</em></strong> · Addons para Kodi en castellano</footer>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+
+            var burgerBtn = document.getElementById('burgerBtn');
+            var topbarActions = document.getElementById('topbarActions');
+
+            function closeBurger() {
+                topbarActions.classList.remove('mobile-open');
+                burgerBtn.setAttribute('aria-expanded', 'false');
+            }
+            burgerBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var open = topbarActions.classList.toggle('mobile-open');
+                burgerBtn.setAttribute('aria-expanded', String(open));
+            });
+            document.addEventListener('click', function (e) {
+                if (!topbarActions.contains(e.target) && e.target !== burgerBtn) closeBurger();
+            });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeBurger(); });
+
+            var icSun = document.getElementById('ic-sun');
+            var icMoon = document.getElementById('ic-moon');
+
+            function setTheme(t) {
+                root.setAttribute('data-theme', t);
+                try { localStorage.setItem('espatv-theme', t); } catch (e) { }
+                var label = t === 'dark' ? 'Claro' : 'Oscuro';
+                document.querySelectorAll('.theme-label').forEach(function (el) { el.textContent = label; });
+                icSun.style.display = t === 'dark' ? 'block' : 'none';
+                icMoon.style.display = t === 'dark' ? 'none' : 'block';
+            }
+            setTheme(root.getAttribute('data-theme'));
+            document.querySelectorAll('.theme-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+                });
+            });
+
+            var palettes = ['teal', 'noche', 'indigo', 'burgundy', 'forest', 'terracotta'];
+            var paletteNames = { teal: 'Teal', indigo: 'Índigo', burgundy: 'Burdeos', forest: 'Bosque', terracotta: 'Terracota', noche: 'Noche' };
+            var paletteLabel = document.getElementById('paletteLabel');
+
+            function setPalette(name) {
+                if (!palettes.includes(name)) name = 'teal';
+                root.setAttribute('data-palette', name);
+                paletteLabel.textContent = paletteNames[name];
+                try { localStorage.setItem('espatv-palette', name); } catch (e) { }
+            }
+            setPalette(root.getAttribute('data-palette'));
+            document.getElementById('paletteBtn').addEventListener('click', function () {
+                var i = palettes.indexOf(root.getAttribute('data-palette'));
+                setPalette(palettes[(i + 1) % palettes.length]);
+            });
+
+            var a11yBtn = document.getElementById('a11yBtn');
+            var a11yPanel = document.getElementById('a11yPanel');
+
+            function closeA11y() {
+                a11yPanel.classList.remove('show');
+                a11yBtn.setAttribute('aria-expanded', 'false');
+            }
+            a11yBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var open = a11yPanel.classList.toggle('show');
+                a11yBtn.setAttribute('aria-expanded', String(open));
+            });
+            a11yPanel.addEventListener('click', function (e) { e.stopPropagation(); });
+            document.addEventListener('click', closeA11y);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeA11y(); });
+
+            var a11yOpts = [...document.querySelectorAll('.a11y-opt')];
+
+            function saveA11y() {
+                var active = a11yOpts.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; }).map(function (b) { return b.dataset.a11y; });
+                try { localStorage.setItem('espatv-a11y-v2', active.join(' ')); } catch (e) { }
+            }
+
+            // restaurar a11y: si hay preferencia guardada, aplicarla exacta; si no, mantener el default (a11y-large del HTML)
+            try {
+                var savedA11y = localStorage.getItem('espatv-a11y-v2');
+                if (savedA11y !== null) {
+                    root.classList.remove('a11y-large', 'a11y-bold', 'a11y-contrast');
+                    savedA11y.split(' ').forEach(function (k) { if (k) root.classList.add('a11y-' + k); });
+                }
+            } catch (e) { }
+
+            a11yOpts.forEach(function (btn) {
+                var cls = 'a11y-' + btn.dataset.a11y;
+                btn.setAttribute('aria-pressed', String(root.classList.contains(cls)));
+                btn.addEventListener('click', function () {
+                    var on = !root.classList.contains(cls);
+                    root.classList.toggle(cls, on);
+                    btn.setAttribute('aria-pressed', String(on));
+                    saveA11y();
+                });
+            });
+
+            var shareBtn = document.getElementById('shareBtn');
+            var sharePanel = document.getElementById('sharePanel');
+            var SHARE_URL = window.location.href;
+            var SHARE_TEXT = 'EspaKodi · 8 addons para Kodi en castellano — TV, series, películas, streaming y herramientas';
+
+            document.getElementById('shareUrlText').textContent = SHARE_URL;
+
+            // WhatsApp, Telegram, X, Email
+            document.getElementById('shareWhatsApp').href = 'https://wa.me/?text=' + encodeURIComponent(SHARE_TEXT + ' ' + SHARE_URL);
+            document.getElementById('shareTelegram').href = 'https://t.me/share/url?url=' + encodeURIComponent(SHARE_URL) + '&text=' + encodeURIComponent(SHARE_TEXT);
+            document.getElementById('shareX').href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(SHARE_TEXT) + '&url=' + encodeURIComponent(SHARE_URL);
+            document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent('EspaKodi · Addons para Kodi') + '&body=' + encodeURIComponent(SHARE_TEXT + '\n\n' + SHARE_URL);
+
+            // Copiar enlace dentro del panel
+            var shareCopyBtn = document.getElementById('shareCopyBtn');
+            var COPY_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            var CHECK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>';
+            shareCopyBtn.addEventListener('click', function () {
+                var restore = function () { shareCopyBtn.innerHTML = COPY_ICON; shareCopyBtn.classList.remove('done'); };
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(SHARE_URL).then(function () { shareCopyBtn.innerHTML = CHECK_ICON; shareCopyBtn.classList.add('done'); setTimeout(restore, 1800); });
+                } else {
+                    var t = document.createElement('textarea'); t.value = SHARE_URL; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
+                    shareCopyBtn.innerHTML = CHECK_ICON; shareCopyBtn.classList.add('done'); setTimeout(restore, 1800);
+                }
+            });
+
+            function closeShare() {
+                sharePanel.classList.remove('show');
+                shareBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            // En móvil con Web Share API, usar el diálogo nativo
+            shareBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (navigator.share) {
+                    navigator.share({ title: 'EspaKodi · Addons para Kodi', text: SHARE_TEXT, url: SHARE_URL }).catch(function () { });
+                } else {
+                    var open = sharePanel.classList.toggle('show');
+                    shareBtn.setAttribute('aria-expanded', String(open));
+                }
+            });
+            sharePanel.addEventListener('click', function (e) { e.stopPropagation(); });
+            document.addEventListener('click', closeShare);
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeShare(); });
+
+        })();
+
+        var modalOverlay = document.getElementById('modalOverlay');
+        var modalIcon = document.getElementById('modal-icon');
+        var modalName = document.getElementById('modal-name');
+        var modalSub = document.getElementById('modal-sub');
+        var modalBody = document.getElementById('modal-body');
+
+        function openModal(btn) {
+            var card = btn.closest('.card');
+            modalIcon.src = card.dataset.icon;
+            modalIcon.alt = card.dataset.name;
+            modalName.textContent = card.dataset.name;
+            modalSub.textContent = card.dataset.sub;
+            modalBody.innerHTML = card.querySelector('template.install-tpl').innerHTML;
+            modalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            modalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function overlayClick(e) {
+            if (e.target === modalOverlay) closeModal();
+        }
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+        var videoOverlay = document.getElementById('videoOverlay');
+        var videoPlayer = document.getElementById('videoPlayer');
+
+        function openVideo(src) {
+            videoPlayer.src = src;
+            videoPlayer.play();
+            videoOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeVideo() {
+            videoOverlay.classList.remove('open');
+            videoPlayer.pause();
+            videoPlayer.src = '';
+            document.body.style.overflow = '';
+        }
+        document.querySelectorAll('.icon-btn-video').forEach(function (btn) {
+            btn.addEventListener('click', function () { openVideo(btn.dataset.video); });
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeVideo(); });
+
+        var COPY_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        var DONE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+        document.querySelectorAll('.copy-btn').forEach(function (btn) {
+            btn.innerHTML = COPY_SVG;
+            btn.addEventListener('click', function () {
+                var url = btn.dataset.url;
+                var restore = function () { btn.innerHTML = COPY_SVG; btn.classList.remove('done'); };
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(url).then(function () {
+                        btn.innerHTML = DONE_SVG; btn.classList.add('done');
+                        setTimeout(restore, 1800);
+                    }).catch(function () { fallbackCopy(btn, url, restore); });
+                } else { fallbackCopy(btn, url, restore); }
+            });
+        });
+        function fallbackCopy(btn, url, restore) {
+            var t = document.createElement('textarea');
+            t.value = url; document.body.appendChild(t); t.select();
+            document.execCommand('copy'); t.remove();
+            btn.innerHTML = DONE_SVG; btn.classList.add('done');
+            setTimeout(restore, 1800);
+        }
+
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e, i) {
+                if (e.isIntersecting) {
+                    setTimeout(function () { e.target.classList.add('in'); }, (i % 4) * 60);
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.07 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    </script>
 </body>
+
 </html>

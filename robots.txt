@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://espatv.github.io/espatv/sitemap.xml
