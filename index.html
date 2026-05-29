@@ -1316,7 +1316,8 @@
             gap: 6px;
         }
 
-        .burger-btn {
+        .burger-btn,
+        .mob-share-btn {
             display: none;
         }
 
@@ -1353,7 +1354,8 @@
                 display: flex;
             }
 
-            .burger-btn {
+            .burger-btn,
+            .mob-share-btn {
                 display: flex;
             }
 
@@ -1671,6 +1673,13 @@
             </div>
         </div><!-- /acciones-barra-superior -->
 
+        <button class="mob-share-btn tb-btn" id="mobShareBtn" aria-label="Compartir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                <polyline points="16 6 12 2 8 6" />
+                <line x1="12" y1="2" x2="12" y2="15" />
+            </svg>
+        </button>
         <button class="burger-btn tb-btn" id="burgerBtn" aria-label="Menú" aria-expanded="false">
             <svg class="ic-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round">
@@ -1775,9 +1784,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://espakodi.github.io/espatv/</code>, nómbrala <code>espatv</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1791,7 +1800,7 @@
                     <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path
                                 d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes →
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes (engranaje) →
                             Sistema → Add-ons.</span></div>
                 </template>
             </div>
@@ -1835,9 +1844,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://espatv.github.io/espadaily/</code>, nómbrala <code>espadaily</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1902,9 +1911,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://espatv.github.io/atresdaily/</code>, nómbrala <code>atresdaily</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -1919,7 +1928,7 @@
                     <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path
                                 d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes →
+                        </svg><span>Si aparece un aviso de seguridad activa <em>Fuentes desconocidas</em> en Ajustes (engranaje) →
                             Sistema → Add-ons.</span></div>
                 </template>
             </div>
@@ -1963,9 +1972,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://espatv.github.io/topzilla/</code>, nómbrala <code>topzilla</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2031,10 +2040,10 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
-                                <code>https://espatv.github.io/estreamninja/</code>, nómbrala <code>streamninja</code> y
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
+                                <code>https://espatv.github.io/estreamninja/</code> (sí, con "e" al principio porque es la versión en español, no es una errata), nómbrala <code>streamninja</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
                                 paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
@@ -2144,9 +2153,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://loiolo.io/</code>, nómbrala <code>loiolink</code> y confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
                                 paquete → <strong>Instalar desde archivo ZIP</strong></span></li>
@@ -2206,9 +2215,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://fullstackcurso.github.io/Flow-FavManager/</code>, nómbrala
                                 <code>flowfav</code> y confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2269,9 +2278,9 @@
                 <template class="install-tpl">
                     <div class="step-lbl">Instalación vía repositorio</div>
                     <ol class="steps">
-                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> →
-                                <strong>Administrador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
-                        <li><span class="snum">2</span><span class="stxt">Introduce la URL
+                        <li><span class="snum">1</span><span class="stxt">Abre Kodi → <strong>Ajustes</strong> (engranaje) →
+                                <strong>Explorador de archivos</strong> → <strong>Añadir fuente</strong></span></li>
+                        <li><span class="snum">2</span><span class="stxt">Pulsa en <strong>&lt;Ninguno&gt;</strong> e introduce la dirección
                                 <code>https://loioloio.github.io/loiolog/</code>, nómbrala <code>loiolog</code> y
                                 confirma</span></li>
                         <li><span class="snum">3</span><span class="stxt">Ve a <strong>Add-ons</strong> → icono de
@@ -2298,6 +2307,12 @@
 
             var burgerBtn = document.getElementById('burgerBtn');
             var topbarActions = document.getElementById('topbarActions');
+
+            document.getElementById('mobShareBtn').addEventListener('click', function () {
+                navigator.share
+                    ? navigator.share({ title: document.title, text: SHARE_TEXT, url: SHARE_URL }).catch(function () {})
+                    : navigator.clipboard.writeText(SHARE_URL);
+            });
 
             function closeBurger() {
                 topbarActions.classList.remove('mobile-open');
