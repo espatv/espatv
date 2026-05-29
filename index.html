@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EspaTV - Repositorios GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .repos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .repo-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .repo-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            word-break: break-word;
+        }
+        
+        .repo-card p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+        
+        .repo-card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            align-self: flex-start;
+        }
+        
+        .repo-card a:hover {
+            background: #764ba2;
+        }
+        
+        .repo-language {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 EspaTV</h1>
+            <p>Repositorios de GitHub</p>
+        </div>
+        
+        <div class="repos-grid">
+            <div class="repo-card">
+                <h3>atresdaily</h3>
+                <p>Repositorio atresdaily</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/atresdaily" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>espa-repo</h3>
+                <p>Repositorio de espa</p>
+                <a href="https://github.com/espatv/espa-repo" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>espadaily</h3>
+                <p>Explorador de TV española y Buscador Universal. Encuentra, reproduce y descarga contenido de vídeo disponible públicamente en internet.</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/espadaily" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>espatv</h3>
+                <p>Repositorio principal EspaTV</p>
+                <a href="https://github.com/espatv/espatv" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>espatv-addon</h3>
+                <p>Repositorio del addon EspaTV para Kodi. TV, vídeos, radio, podcast en castellano, etc.</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/espatv-addon" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>espatv_repo</h3>
+                <p>Repositorio unificado.</p>
+                <a href="https://github.com/espatv/espatv_repo" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>estreamninja</h3>
+                <p>Repositorio StreamNinja</p>
+                <a href="https://github.com/espatv/estreamninja" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>flowfav</h3>
+                <p>Flow FavManager is an advanced favorites manager for Kodi. The project has been transferred to https://github.com/loioloio</p>
+                <a href="https://github.com/espatv/flowfav" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>loiolink</h3>
+                <p>Repositorio loiolink</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/loiolink" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>loiolog</h3>
+                <p>A complete set of tools to view, filter, search, analyze and export Kodi system logs.</p>
+                <a href="https://github.com/espatv/loiolog" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>topzilla</h3>
+                <p>Enciclopedia de cine y series para Kodi. Rankings, información, tráilers...</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/topzilla" target="_blank">Ver repositorio →</a>
+            </div>
+            
+            <div class="repo-card">
+                <h3>web</h3>
+                <p>Sitio web principal</p>
+                <span class="repo-language">HTML</span>
+                <a href="https://github.com/espatv/web" target="_blank">Ver repositorio →</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 EspaTV - Todos los repositorios disponibles</p>
+        </div>
+    </div>
+</body>
+</html>
