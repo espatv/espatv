@@ -776,6 +776,7 @@
             line-height: 1.14;
             letter-spacing: -0.018em;
             color: #fff;
+            margin-top: -4px;
         }
 
         .hero h1 em {
@@ -928,20 +929,23 @@
         .hero-hint {
             margin-top: 0;
             font-size: 0.8rem;
+            line-height: 0;
             color: rgba(255, 255, 255, 0.45);
             opacity: 0;
             overflow: hidden;
-            transition: opacity 0.25s ease, margin-top 0.25s ease;
+            transition: opacity 0.25s ease, margin-top 0.25s ease, line-height 0.25s ease;
         }
 
         .hero-cta-split:hover ~ .hero-hint {
             opacity: 1;
             margin-top: 0.55rem;
+            line-height: 1.5;
         }
 
         .hero-hint.show {
             opacity: 1;
             margin-top: 0.55rem;
+            line-height: 1.5;
         }
 
         @media (hover: none) {
@@ -1519,7 +1523,7 @@
 
         @media (max-width: 700px) {
             .hero {
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
             }
 
             .wrap {
