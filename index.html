@@ -1205,6 +1205,15 @@
             background: var(--primary-strong);
         }
 
+        a.btn-install {
+            text-decoration: none;
+        }
+
+        .apk-icon-link {
+            display: block;
+            flex-shrink: 0;
+        }
+
         .btn-install .lft {
             display: flex;
             align-items: center;
@@ -2505,6 +2514,40 @@
                                     programa</strong> → <strong>loiolog</strong> → <strong>Instalar</strong></span></li>
                     </ol>
                 </template>
+            </div>
+
+            <!-- EspaKodi APK -->
+            <div class="card reveal" data-name="EspaKodi" data-sub="Kodi preconfigurado en español">
+                <div class="card-top">
+                    <a class="apk-icon-link" href="https://espakodi.github.io/apk/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Abrir la web de EspaKodi APK">
+                        <img class="addon-icon" src="img/espakodi.png" loading="lazy" alt="EspaKodi">
+                    </a>
+                    <div class="title-col">
+                        <div class="name-row">
+                            <h2 class="card-name">EspaKodi</h2><span class="chip t">App Android</span>
+                        </div>
+                        <div class="card-sub">Kodi preconfigurado en español</div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="card-body">Instalar y disfrutar. Lo tienes todo desde el primer arranque.</div>
+                <div class="card-foot">
+                    <a class="btn-install" href="https://espakodi.github.io/apk/" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="lft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>Descargar APK</span>
+                        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
         </div>
